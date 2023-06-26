@@ -27,3 +27,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<%= link_to 'Back', session.delete(:return_to) || root_path %>
