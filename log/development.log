@@ -1524,3 +1524,314 @@ Processing by FoodsController#index as TURBO_STREAM
 Completed 200 OK in 46ms (Views: 9.3ms | ActiveRecord: 1.7ms | Allocations: 4101)
 
 
+Started GET "/" for 127.0.0.1 at 2023-06-27 20:54:00 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 1.7ms | Allocations: 463)
+  Rendered layout layouts/application.html.erb (Duration: 132.8ms | Allocations: 33139)
+Completed 200 OK in 164ms (Views: 142.8ms | ActiveRecord: 0.0ms | Allocations: 37438)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-06-27 20:54:06 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 715)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.0ms | Allocations: 3808)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 5998)
+Completed 200 OK in 58ms (Views: 28.4ms | ActiveRecord: 6.5ms | Allocations: 13370)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-06-27 20:54:14 +0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"any@example.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "any@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_created_at", "2023-06-27 15:54:15.279257"], ["updated_at", "2023-06-27 15:54:15.279759"], ["id", 1]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 299ms (ActiveRecord: 2.7ms | Allocations: 11166)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-27 20:54:15 +0500
+Processing by PagesController#hello as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 0.2ms | Allocations: 45)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2375)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 2719)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-06-27 20:54:20 +0500
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (1.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/foods/index.html.erb:5
+  Rendered foods/index.html.erb within layouts/application (Duration: 62.6ms | Allocations: 6074)
+  Rendered layout layouts/application.html.erb (Duration: 67.6ms | Allocations: 8478)
+Completed 200 OK in 85ms (Views: 56.6ms | ActiveRecord: 15.3ms | Allocations: 12014)
+
+
+Started GET "/foods/create" for 127.0.0.1 at 2023-06-27 20:54:26 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/foods/create"):
+  
+Started GET "/foods/new" for 127.0.0.1 at 2023-06-27 20:54:30 +0500
+Processing by FoodsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering foods/new.html.erb within layouts/application
+  Rendered foods/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1312)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 3465)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 3808)
+
+
+Started POST "/foods" for 127.0.0.1 at 2023-06-27 20:54:40 +0500
+Processing by FoodsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "food"=>{"name"=>"Burger", "quantity"=>"7"}, "commit"=>"Add Food"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:18:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:18:in `create'
+  [1m[36mFood Create (0.7ms)[0m  [1m[32mINSERT INTO "foods" ("name", "measuring_unit", "price", "quantity", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Burger"], ["measuring_unit", nil], ["price", nil], ["quantity", 7], ["user_id", 1], ["created_at", "2023-06-27 15:54:40.597495"], ["updated_at", "2023-06-27 15:54:40.597495"]]
+  ↳ app/controllers/foods_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/foods
+Completed 302 Found in 22ms (ActiveRecord: 2.7ms | Allocations: 6650)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-06-27 20:54:40 +0500
+Processing by FoodsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/foods/index.html.erb:5
+  Rendered foods/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 747)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3087)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 1.2ms | Allocations: 4020)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-06-27 20:54:56 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/foods/index.html.erb:5
+  Rendered foods/index.html.erb within layouts/application (Duration: 46.2ms | Allocations: 7223)
+  Rendered layout layouts/application.html.erb (Duration: 164.4ms | Allocations: 40202)
+Completed 200 OK in 266ms (Views: 166.9ms | ActiveRecord: 22.8ms | Allocations: 53862)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-27 20:55:02 +0500
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 0.7ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 2615)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 3325)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-06-27 20:55:04 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms | Allocations: 2083)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-27 20:55:04 +0500
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 0.2ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 2359)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 2654)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-06-27 20:55:06 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 1.6ms | Allocations: 1581)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-27 20:55:06 +0500
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 0.2ms | Allocations: 45)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 2369)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 2664)
+
+
+Started GET "/" for ::1 at 2023-06-27 20:56:34 +0500
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 0.7ms | Allocations: 45)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2248)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 2541)
+
+
+Started GET "/" for ::1 at 2023-06-27 20:56:45 +0500
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 0.2ms | Allocations: 45)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 2236)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 2532)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-06-27 20:56:49 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 242)
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 597)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 38.5ms | Allocations: 11916)
+  Rendered layout layouts/application.html.erb (Duration: 43.0ms | Allocations: 14113)
+Completed 200 OK in 50ms (Views: 45.5ms | ActiveRecord: 0.0ms | Allocations: 15283)
+
+
+Started POST "/users" for ::1 at 2023-06-27 20:57:05 +0500
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"new@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "new@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (5.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "new@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-06-27 15:57:05.946404"], ["updated_at", "2023-06-27 15:57:05.946404"], ["name", nil]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://[::1]:3000/
+Completed 303 See Other in 337ms (ActiveRecord: 7.2ms | Allocations: 9158)
+
+
+Started GET "/" for ::1 at 2023-06-27 20:57:05 +0500
+Processing by PagesController#hello as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 0.2ms | Allocations: 45)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2413)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 2759)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-06-27 20:57:16 +0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://[::1]:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1722)
+
+
+Started GET "/" for ::1 at 2023-06-27 20:57:16 +0500
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 0.2ms | Allocations: 45)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 2358)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 2653)
+
+
+Started GET "/foods" for ::1 at 2023-06-27 20:57:20 +0500
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/foods/index.html.erb:5
+  Rendered foods/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 747)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3051)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.7ms | Allocations: 3980)
+
+
+Started GET "/" for ::1 at 2023-06-27 20:57:36 +0500
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 0.2ms | Allocations: 45)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 2365)
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 2658)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-06-27 20:57:39 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://[::1]:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1551)
+
+
+Started GET "/" for ::1 at 2023-06-27 20:57:39 +0500
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 0.1ms | Allocations: 45)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2364)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2659)
+
+
+Started GET "/" for ::1 at 2023-06-27 21:02:14 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 1.8ms | Allocations: 463)
+  Rendered layout layouts/application.html.erb (Duration: 143.4ms | Allocations: 39098)
+Completed 200 OK in 161ms (Views: 147.3ms | ActiveRecord: 0.0ms | Allocations: 43399)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-06-27 21:02:16 +0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://[::1]:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 45ms (ActiveRecord: 10.9ms | Allocations: 9458)
+
+
+Started GET "/" for ::1 at 2023-06-27 21:02:16 +0500
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2360)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 2656)
+
+
+Started GET "/foods" for ::1 at 2023-06-27 21:02:20 +0500
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/foods/index.html.erb:4
+  Rendered foods/index.html.erb within layouts/application (Duration: 35.4ms | Allocations: 6048)
+  Rendered layout layouts/application.html.erb (Duration: 44.7ms | Allocations: 8430)
+Completed 200 OK in 73ms (Views: 41.8ms | ActiveRecord: 6.1ms | Allocations: 11968)
+
+
+Started GET "/foods/create" for ::1 at 2023-06-27 21:02:30 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/foods/create"):
+  
+Started GET "/foods/new" for ::1 at 2023-06-27 21:02:35 +0500
+Processing by FoodsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering foods/new.html.erb within layouts/application
+  Rendered foods/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1694)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3846)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 4208)
+
+

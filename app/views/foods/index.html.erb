@@ -1,7 +1,7 @@
-<%= link_to 'Add Food', new_food_path %>
+<div class="food-list-container">
+  <h1>Food list for <%= @user.name %></h1>
 
-<h1>Food list for <%= @user.name %></h1>
-
-<% @foods.each do |food| %>
-  <p> <%= food.name %> (Quantity <%= food.quantity %>) </p>
-<% end %>
+  <% @foods.each do |food| %>
+    <p><%= food.name %> (Quantity <%= food.quantity %>)</p>
+  <% end %>
+</div>

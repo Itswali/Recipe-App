@@ -126,3 +126,93 @@
 .registration-form a {
   color: #ffeba7;
 }
+
+
+
+
+
+
+
+
+/* application.css */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+/* Shared Styles */
+.navigation {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.menu-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #ffeba7;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* Food List Page */
+.food-list-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #2b2e38;
+  border-radius: 6px;
+  color: #ffeba7;
+}
+
+.food-list-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.food-list-container p {
+  margin-bottom: 10px;
+}
+
+/* Create Food Page */
+.create-food-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #2b2e38;
+  border-radius: 6px;
+  color: #ffeba7;
+}
+
+.create-food-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.create-food-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.create-food-container input[type="text"],
+.create-food-container input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #1f2029;
+  color: #ffeba7;
+  margin-bottom: 10px;
+}
+
+.create-food-container input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffeba7;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+

@@ -1,11 +1,13 @@
-<h2>Add New Food</h2>
+<div class="create-food-container">
+  <h2>Add New Food</h2>
 
-<%= form_with(model: @food, url: foods_path, local: true) do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
+  <%= form_with(model: @food, url: foods_path, local: true) do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
 
-  <%= form.label :quantity %>
-  <%= form.number_field :quantity %>
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
 
-  <%= form.submit "Add Food" %>
-<% end %>
+    <%= form.submit "Add Food" %>
+  <% end %>
+</div>
