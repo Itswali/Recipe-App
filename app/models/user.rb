@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          has_many :recipes, class_name: 'Recipe', foreign_key: 'user_id'
 
+         validates :name, presence: true
+
          # Add admin role
   def admin?
     role == 'admin'
