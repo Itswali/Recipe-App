@@ -412,3 +412,103 @@ Processing by PagesController#hello as HTML
 Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 2620)
 
 
+Started GET "/" for 127.0.0.1 at 2023-06-27 10:39:29 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 53.1ms | Allocations: 463)
+  Rendered layout layouts/application.html.erb (Duration: 6285.3ms | Allocations: 89597)
+Completed 200 OK in 6874ms (Views: 6357.2ms | ActiveRecord: 0.0ms | Allocations: 94371)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-06-27 10:40:17 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 22.5ms | Allocations: 720)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 476.1ms | Allocations: 4671)
+  Rendered layout layouts/application.html.erb (Duration: 683.9ms | Allocations: 6880)
+Completed 200 OK in 901ms (Views: 727.7ms | ActiveRecord: 23.7ms | Allocations: 14522)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-06-27 10:40:25 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 22.0ms | Allocations: 234)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 156)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 77.1ms | Allocations: 2138)
+  Rendered layout layouts/application.html.erb (Duration: 286.4ms | Allocations: 4337)
+Completed 200 OK in 382ms (Views: 320.0ms | ActiveRecord: 0.0ms | Allocations: 5402)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-06-27 10:40:30 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 132)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1237)
+  Rendered layout layouts/application.html.erb (Duration: 196.8ms | Allocations: 3348)
+Completed 200 OK in 254ms (Views: 199.9ms | ActiveRecord: 0.0ms | Allocations: 3955)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-27 10:40:32 +0300
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 0.4ms | Allocations: 45)
+  Rendered layout layouts/application.html.erb (Duration: 215.7ms | Allocations: 2342)
+Completed 200 OK in 272ms (Views: 218.4ms | ActiveRecord: 0.0ms | Allocations: 2641)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-06-27 10:40:49 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 132)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1237)
+  Rendered layout layouts/application.html.erb (Duration: 361.0ms | Allocations: 3349)
+Completed 200 OK in 442ms (Views: 365.5ms | ActiveRecord: 0.0ms | Allocations: 3961)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-06-27 10:40:57 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1215)
+  Rendered layout layouts/application.html.erb (Duration: 209.8ms | Allocations: 3334)
+Completed 200 OK in 267ms (Views: 212.5ms | ActiveRecord: 0.0ms | Allocations: 3864)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-06-27 10:42:10 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 132)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.9ms | Allocations: 1237)
+  Rendered layout layouts/application.html.erb (Duration: 283.8ms | Allocations: 3348)
+Completed 200 OK in 359ms (Views: 290.4ms | ActiveRecord: 0.0ms | Allocations: 3960)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-27 10:43:37 +0300
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 11.4ms | Allocations: 45)
+  Rendered layout layouts/application.html.erb (Duration: 335.8ms | Allocations: 2325)
+Completed 200 OK in 441ms (Views: 359.7ms | ActiveRecord: 0.0ms | Allocations: 2620)
+
+
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8272370091435100875)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRecipes (20230627081657)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (156.0ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "preparation_time" integer, "cooking_time" integer, "description" text, "public" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (6.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230627081657"]]
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(8272370091435100875)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
