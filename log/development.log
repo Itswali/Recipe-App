@@ -1835,3 +1835,118 @@ Processing by FoodsController#new as HTML
 Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 4208)
 
 
+Started GET "/" for 127.0.0.1 at 2023-06-28 01:53:06 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 2.2ms | Allocations: 463)
+  Rendered layout layouts/application.html.erb (Duration: 188.9ms | Allocations: 39481)
+Completed 200 OK in 227ms (Views: 195.8ms | ActiveRecord: 0.0ms | Allocations: 43782)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-06-28 01:53:14 +0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 47ms (ActiveRecord: 11.7ms | Allocations: 10084)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-28 01:53:14 +0500
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 1.4ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 2377)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 2673)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-28 01:57:27 +0500
+Processing by PagesController#hello as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 529)
+
+
+  
+NameError (undefined local variable or method `new_food_add_path' for #<PagesController:0x00000000010b08>):
+  
+app/controllers/pages_controller.rb:6:in `hello'
+Started GET "/" for 127.0.0.1 at 2023-06-28 02:00:57 +0500
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 0.9ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 13568)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms | Allocations: 14534)
+
+
+Started GET "/foods/new" for 127.0.0.1 at 2023-06-28 02:01:00 +0500
+Processing by FoodsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering foods/new.html.erb within layouts/application
+  Rendered foods/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 1811)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 4010)
+Completed 200 OK in 63ms (Views: 26.5ms | ActiveRecord: 6.6ms | Allocations: 9504)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-06-28 02:01:02 +0500
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/foods_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (1.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/foods/index.html.erb:4
+  Rendered foods/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2232)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 4507)
+Completed 200 OK in 43ms (Views: 18.9ms | ActiveRecord: 8.1ms | Allocations: 9442)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-06-28 02:01:05 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.3ms | Allocations: 716)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.7ms | Allocations: 3175)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 5365)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.0ms | Allocations: 6811)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-06-28 02:01:07 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.6ms | Allocations: 233)
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 156)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2140)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 4338)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 5404)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-28 02:02:32 +0500
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 2.5ms | Allocations: 382)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 2968)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 3833)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-28 02:03:00 +0500
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 0.5ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 3977)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms | Allocations: 4271)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-28 02:04:00 +0500
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 1.3ms | Allocations: 370)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 13700)
+Completed 200 OK in 45ms (Views: 39.7ms | ActiveRecord: 0.0ms | Allocations: 14661)
+
+
