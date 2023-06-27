@@ -127,18 +127,8 @@
   color: #ffeba7;
 }
 
-
-
-
-
-
-
-
-/* application.css */
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
-
 /* Shared Styles */
+
 .navigation {
   text-align: right;
   margin-bottom: 20px;
@@ -215,4 +205,3 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-
