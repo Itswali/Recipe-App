@@ -579,3 +579,31 @@ FOREIGN KEY ("recipe_id")
   [1m[36mActiveRecord::InternalMetadata Load (3.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(8272370091435100875)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/recipes" for 127.0.0.1 at 2023-06-27 12:52:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 1016.0ms | Allocations: 13040)
+Completed 200 OK in 1099ms (Views: 1037.7ms | ActiveRecord: 0.0ms | Allocations: 13564)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-27 12:52:15 +0300
+Processing by PagesController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (Duration: 3.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 208.1ms | Allocations: 2431)
+Completed 200 OK in 277ms (Views: 219.3ms | ActiveRecord: 0.0ms | Allocations: 2996)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2023-06-27 12:52:34 +0300
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 188.1ms | Allocations: 2301)
+Completed 200 OK in 243ms (Views: 191.9ms | ActiveRecord: 0.0ms | Allocations: 2561)
+
+
