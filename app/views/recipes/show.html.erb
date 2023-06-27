@@ -1,2 +1,42 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<div class="recipe-details-container">
+  <h1 class="title"><%= @recipe.name %></h1>
+
+  <div class="recipe-details">
+    <div class="all-details">
+      <p class="detail"><span>Preparation Time:</span><span><%= @recipe.preparation_time %> hours</span></p>
+      <p class="detail"><span>Cooking Time:</span> <span><%= @recipe.cooking_time %> hours</span></p>
+      <p class="detail"><%= @recipe.description %></p>
+    </div>
+    <div class="toggle">
+      <div class="private"><%=@recipe.public? ? 'Public' : 'Private'%></div>
+      <%= button_to @recipe.public? ? 'Make private' : 'Make public', toggle_recipe_path(id: @recipe.id), method: :post, class: 'toggle_btn', remote: true %> 
+    </div>
+
+  </div>
+
+  <div class="buttons">
+    <%# link_to "Generate shooping list", shoppinglist_index_path(recipe_id: @recipe.id) %>
+    <button>Generate Shopping List</button>
+    <%# link_to 'Add ingredient', recipe_foods_path(recipe_id: @recipe.id) %>
+    <button>Add ingredient</button>
+  </div>
+  
+  <div class="recipes-container recipes_container_list">
+    <div class="list">
+      <div class="list_food name title">Food</div>
+      <div class="list_food title">Quantity</div>
+      <div class="list_food title">Value</div>
+      <div class="list_food title">Actions</div>
+    </div>
+    <% @recipe_foods.each do |recipe_food| %>
+      <div class="food">
+        <p><%= recipe_food.food.name %></p>
+        <p><%= recipe_food.quantity %></p>
+        <p>$<%= recipe_food.food.price * recipe_food.quantity %></p>
+        <div>
+          <button>modify</button>
+          <button>remove</button>
+      </div>
+    <% end %>
+    </div>
+</div>
