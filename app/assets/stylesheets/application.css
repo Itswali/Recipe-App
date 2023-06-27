@@ -14,73 +14,7 @@
  *= require_self
  */
 
- @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
-
-
- .registration-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #2b2e38;
-  border-radius: 6px;
-  color: #ffeba7;
-}
-
-.registration-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.registration-form .field {
-  margin-bottom: 20px;
-}
-
-.registration-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.registration-form input[type="email"],
-.registration-form input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  background-color: #1f2029;
-  color: #ffeba7;
-}
-
-.registration-form .actions {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.registration-form input[type="submit"] {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #ffeba7;
-  color: #000000;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.registration-form input[type="submit"]:hover {
-  background-color: #000000;
-  color: #ffeba7;
-  box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
-}
-
-.registration-form a {
-  color: #ffeba7;
-}
-
-.registration-form a:hover {
-  color: #c4c3ca;
-}
-
-
-
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
 .login-form {
   max-width: 400px;
@@ -97,7 +31,8 @@
 }
 
 .login-form .field {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  padding-right: 20px;
 }
 
 .login-form label {
@@ -124,28 +59,70 @@
   border: none;
   border-radius: 4px;
   background-color: #ffeba7;
-  color: #000000;
+  color: #000;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
 }
 
-.login-form input[type="submit"]:hover {
-  background-color: #000000;
-  color: #ffeba7;
-  box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
+.registration-form input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffeba7;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .login-form a {
   color: #ffeba7;
 }
 
-.login-form a:hover {
-  color: #c4c3ca;
-}
-
-
 .links-text {
   text-align: center;
   margin: 5px;
+}
+
+.registration-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #2b2e38;
+  border-radius: 6px;
+  color: #ffeba7;
+}
+
+.registration-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.registration-form .field {
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+
+.registration-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #1f2029;
+  color: #ffeba7;
+}
+
+.registration-form .actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.registration-form a {
+  color: #ffeba7;
 }
