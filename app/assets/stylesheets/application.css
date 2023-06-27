@@ -16,6 +16,36 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
+.main-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #2b2e38;
+  border-radius: 6px;
+  color: #ffeba7;
+  text-align: center;
+}
+
+.main-container h1 {
+  margin-bottom: 20px;
+}
+
+.main-container p {
+  margin-bottom: 10px;
+}
+
+.main-container .main-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #ffeba7;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
 .login-form {
   max-width: 400px;
   margin: 0 auto;
