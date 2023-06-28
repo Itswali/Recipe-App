@@ -12,4 +12,6 @@ class User < ApplicationRecord
   def admin?
     role == 'admin'
   end
+
+  has_many :foods, foreign_key: 'user_id'
 end

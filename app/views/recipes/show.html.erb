@@ -10,14 +10,15 @@
     <% if (@recipe.user == current_user) %>
       <div class="toggle">
         <div class="private"><%=@recipe.public? ? 'Public' : 'Private'%></div>
-        <%= button_to @recipe.public? ? 'Make private' : 'Make public', toggle_recipe_path(id: @recipe.id), method: :post, class: 'toggle_btn', remote: true %> 
+        <%= button_to @recipe.public? ? 'Make private' : 'Make public', toggle_recipe_path(id: @recipe.id), method: :post, class: 'toggle_btn', remote: true %>
       </div>
     <% end %>
   </div>
 
   <div class="buttons">
-    <button><%= link_to "Generate shopping list", shopping_list_path%></button>
-    <button class="recipe_btn"><%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe.id) %></button>
+
+    <%# <button><%= link_to "Generate shopping list", shopping_list_path%></button> %>
+    <%# <button class="recipe_btn"><%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe.id) </button> %>  %>
   </div>
 
   <% if @recipe.public? || (@recipe.user == current_user) %>

@@ -1,0 +1,19 @@
+<div class="create-food-container">
+  <h2>Add New Food</h2>
+
+  <%= form_with(model: @food, url: foods_path, local: true) do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+
+    <%= form.label :measuring_unit %>
+    <%= form.text_field :measuring_unit %>
+
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+
+    <%= form.submit "Add Food" %>
+  <% end %>
+  <div class="back-link-container">
+    <%= link_to 'Back', session.delete(:return_to) || root_path, class: "back-link" %>
+  </div>
+</div>
