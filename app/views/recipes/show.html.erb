@@ -16,8 +16,7 @@
   </div>
 
   <div class="buttons">
-    <%# link_to "Generate shooping list", shoppinglist_index_path(recipe_id: @recipe.id) %>
-    <button>Generate Shopping List</button>
+    <button><%= link_to "Generate shopping list", shopping_list_path%></button>
     <button class="recipe_btn"><%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe.id) %></button>
   </div>
 
@@ -39,7 +38,7 @@
               <td><%= recipe_food.quantity %></td>
               <td>$<%= recipe_food.food.price * recipe_food.quantity %></td>
               <td class="modify-remove">
-                <%= button_to "Modify", edit_recipe_recipe_food_path(@recipe, recipe_food), class: "btn btn-primary" %>
+                <%= link_to "Modify", edit_recipe_recipe_food_path(@recipe, recipe_food), class: "btn btn-primary" %>
                 <%= button_to "Remove", recipe_recipe_food_path(@recipe, recipe_food), method: :delete, data: { confirm: "Are you sure you want to delete this recipe food?" }, class: "btn btn-danger" %>
               </td>
             </tr>

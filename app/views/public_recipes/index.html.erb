@@ -1,11 +1,11 @@
-<h1 class="title">Public Recipes</h1>
+<h2 class="title">Public Recipes</h2>
 
 <div class="recipes-container">
   <% @public_recipes.each do |public_recipe| %>
     <%= link_to recipe_path(id: public_recipe.id) do%>
       <div class="public-recipe-card">
         <div class="recipe-name">
-          <h3><%= public_recipe.name %></h3>
+          <h4><%= public_recipe.name %></h4>
           <span>By: <%= public_recipe.user.name %></span>
         </div>
         <div class="total-food-price">

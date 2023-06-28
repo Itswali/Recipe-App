@@ -2,6 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    # if user is not logged in
     user ||= User.new
 
     # allow everyone to read public recipes
@@ -12,9 +13,10 @@ class Ability
       can :manage, :all
     else
       can :manage, Recipe, user_id: user.id
-      # can :manage, Food, user_id: user.id
+      can :manage, RecipeFood, user_id: user.id
+      can :manage, Food, user_id: user.id
       can :read, :all
-      # can :create, Food, recipe: { user_id: user.id }
+      can :create, Food, recipe: { user_id: user.id }
     end
     # Define abilities for the user here. For example:
     #
