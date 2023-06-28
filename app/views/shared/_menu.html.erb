@@ -6,4 +6,5 @@
   <% if current_user %>
     <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: "menu-link" %>
   <% end %>
+  <%= link_to 'Back', session.delete(:return_to) || root_path %>
 </div>
