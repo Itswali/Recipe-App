@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   get '/shopping_list', to: 'shopping_list#index'
 
+  resources :foods, only: [:index, :new, :create]
+  resources :recipes, only: [:index, :show, :new, :create, :destroy]
   # Your other routes go here
   root 'recipes#index'
 end
