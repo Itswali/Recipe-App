@@ -46,6 +46,23 @@
   margin-right: 10px;
 }
 
+.back-link-container {
+  display: flex;
+  justify-content: center;
+}
+
+.back-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #ffeba7;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
 .login-form {
   max-width: 400px;
   margin: 0 auto;
