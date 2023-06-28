@@ -3,40 +3,49 @@
 
   <div class="recipe-details">
     <div class="all-details">
-      <p class="detail"><span>Preparation Time:</span><span><%= @recipe.preparation_time %> hours</span></p>
-      <p class="detail"><span>Cooking Time:</span> <span><%= @recipe.cooking_time %> hours</span></p>
+      <p class="detail"><span><strong>Preparation Time: </span></strong><span><%= @recipe.preparation_time %> minutes</span></p>
+      <p class="detail"><span><strong>Cooking Time:</span></strong> <span><%= @recipe.cooking_time %> minutes</span></p>
       <p class="detail"><%= @recipe.description %></p>
     </div>
-    <div class="toggle">
-      <div class="private"><%=@recipe.public? ? 'Public' : 'Private'%></div>
-      <%= button_to @recipe.public? ? 'Make private' : 'Make public', toggle_recipe_path(id: @recipe.id), method: :post, class: 'toggle_btn', remote: true %> 
-    </div>
-
+    <% if (@recipe.user == current_user) %>
+      <div class="toggle">
+        <div class="private"><%=@recipe.public? ? 'Public' : 'Private'%></div>
+        <%= button_to @recipe.public? ? 'Make private' : 'Make public', toggle_recipe_path(id: @recipe.id), method: :post, class: 'toggle_btn', remote: true %> 
+      </div>
+    <% end %>
   </div>
 
   <div class="buttons">
     <%# link_to "Generate shooping list", shoppinglist_index_path(recipe_id: @recipe.id) %>
     <button>Generate Shopping List</button>
-    <%# link_to 'Add ingredient', recipe_foods_path(recipe_id: @recipe.id) %>
-    <button>Add ingredient</button>
+    <button class="recipe_btn"><%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe.id) %></button>
   </div>
-  
-  <div class="recipes-container recipes_container_list">
-    <div class="list">
-      <div class="list_food name title">Food</div>
-      <div class="list_food title">Quantity</div>
-      <div class="list_food title">Value</div>
-      <div class="list_food title">Actions</div>
+
+  <% if @recipe.public? || (@recipe.user == current_user) %>
+    <div class="recipes-container">
+      <table class="table recipe-table">
+        <thead>
+          <tr>
+            <th class="list_food name title">Food</th>
+            <th class="list_food title">Quantity</th>
+            <th class="list_food title">Value</th>
+            <th class="list_food title">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @recipe_foods.each do |recipe_food| %>
+            <tr class="food">
+              <td><%= recipe_food.food.name %></td>
+              <td><%= recipe_food.quantity %></td>
+              <td>$<%= recipe_food.food.price * recipe_food.quantity %></td>
+              <td class="modify-remove">
+                <%= button_to "Modify", edit_recipe_recipe_food_path(@recipe, recipe_food), class: "btn btn-primary" %>
+                <%= button_to "Remove", recipe_recipe_food_path(@recipe, recipe_food), method: :delete, data: { confirm: "Are you sure you want to delete this recipe food?" }, class: "btn btn-danger" %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
-    <% @recipe_foods.each do |recipe_food| %>
-      <div class="food">
-        <p><%= recipe_food.food.name %></p>
-        <p><%= recipe_food.quantity %></p>
-        <p>$<%= recipe_food.food.price * recipe_food.quantity %></p>
-        <div>
-          <button>modify</button>
-          <button>remove</button>
-      </div>
-    <% end %>
-    </div>
+  <% end %>
 </div>

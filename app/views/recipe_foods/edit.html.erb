@@ -1,0 +1,15 @@
+<div class="recipes-container">
+  <h1>Edit Recipe Food Quantity</h1>
+  <h2>Current quantity value: <%= @recipe_food.quantity %></h2>
+<%= form_with scope: @recipe_food, url: recipe_recipe_food_path(@recipe, @recipe_food), method: :patch, local: true do |f| %>
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity, min: 0 %>
+    <% if @recipe_food.errors[:quantity].any? %>
+      <div class="invalid-feedback">
+    <%= @recipe_food.errors[:quantity].join(', ') %>
+      </div>
+    <% end %>
+    <%= f.submit "Update", class: "btn btn-primary" %>
+    <%= link_to "Cancel", recipe_path(@recipe), class: "btn btn-secondary" %>
+  <% end %>
+</div>

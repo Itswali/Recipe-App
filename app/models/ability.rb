@@ -4,7 +4,6 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-
     user ||= User.new
 
     # allow everyone to read public recipes
