@@ -14,10 +14,9 @@
  *= require_self
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
- @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
- * {
+* {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -28,9 +27,8 @@
   margin: 20px;
 }
 
-h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+p {
+  margin-bottom: 10px;
 }
 
 .food-item {
@@ -53,12 +51,8 @@ h1 {
   cursor: pointer;
 }
 
-.back-link-container {
-  margin-top: 20px;
-}
-
 .back-link {
-  color: #0000ff;
+  color: #00f;
   text-decoration: none;
 }
 
@@ -99,18 +93,8 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-.back-link-container {
-  margin-top: 20px;
-}
 
-.back-link {
-  color: #0000ff;
-  text-decoration: none;
-}
 
-.back-link:hover {
-  text-decoration: underline;
-}
 
 /* Add the following CSS rules to style the main page */
 
@@ -122,10 +106,6 @@ input[type="submit"] {
 h1 {
   font-size: 24px;
   margin-bottom: 20px;
-}
-
-p {
-  margin-bottom: 10px;
 }
 
 .main-link {
@@ -145,9 +125,15 @@ p {
 
 /* Add the following CSS rules to style the public_recipes/index page */
 
+h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
 .title {
   text-align: center;
   font-size: 24px;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
@@ -182,40 +168,10 @@ p {
   margin: 0;
 }
 
-.back-link-container {
-  margin-top: 20px;
-}
 
-.back-link {
-  color: #0000ff;
-  text-decoration: none;
-}
 
-.back-link:hover {
-  text-decoration: underline;
-}
 
 /* Add the following CSS rules to style the recipe_foods/edit page */
-
-.title {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.recipes-container {
-  margin: 20px;
-}
-
-h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
 
 input[type="number"] {
   width: 100%;
@@ -248,30 +204,14 @@ input[type="number"] {
   border: none;
 }
 
-.back-link-container {
-  margin-top: 20px;
-}
 
-.back-link {
-  color: #0000ff;
-  text-decoration: none;
-}
 
-.back-link:hover {
-  text-decoration: underline;
-}
 
 
 /* Add the following CSS rules to style the recipe_foods/new page */
 
 .back-recipe {
   margin-bottom: 10px;
-}
-
-.title {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
 }
 
 .recipe-food-new {
@@ -299,25 +239,13 @@ input[type="number"] {
   cursor: pointer;
 }
 
-.back-link-container {
-  margin-top: 20px;
-}
 
-.back-link {
-  color: #0000ff;
-  text-decoration: none;
-}
 
-.back-link:hover {
-  text-decoration: underline;
-}
+
+
 
 
 /* Add the following CSS rules to style the recipe/index page */
-
-.recipes-container {
-  margin: 20px;
-}
 
 .recipe-card {
   background-color: #f2f2f2;
@@ -361,18 +289,10 @@ input[type="number"] {
   text-decoration: none;
 }
 
-.back-link-container {
-  margin-top: 20px;
-}
 
-.back-link {
-  color: #0000ff;
-  text-decoration: none;
-}
 
-.back-link:hover {
-  text-decoration: underline;
-}
+
+
 
 /* Add the following CSS rules to style the recipes/new page */
 
@@ -393,20 +313,8 @@ input[type="number"] {
   margin: 20px;
 }
 
-.title {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
 .new-recipe {
   margin-bottom: 20px;
-}
-
-.form-control {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 10px;
 }
 
 .public {
@@ -428,30 +336,16 @@ input[type="number"] {
   cursor: pointer;
 }
 
-.back-link-container {
-  margin-top: 20px;
-}
 
-.back-link {
-  color: #0000ff;
-  text-decoration: none;
-}
 
-.back-link:hover {
-  text-decoration: underline;
-}
+
+
 
 
 /* Add the following CSS rules to style the recipes/show page */
 
 .recipe-details-container {
   margin: 20px;
-}
-
-.title {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
 }
 
 .recipe-details {
@@ -498,10 +392,6 @@ input[type="number"] {
   margin-bottom: 20px;
 }
 
-.recipes-container {
-  margin-bottom: 20px;
-}
-
 .recipe-table {
   width: 100%;
   border-collapse: collapse;
@@ -525,34 +415,10 @@ input[type="number"] {
   margin-right: 5px;
 }
 
-.back-link-container {
-  margin-top: 20px;
-}
-
-.back-link {
-  color: #0000ff;
-  text-decoration: none;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-}
-
-.title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.recipes-container {
-  margin-bottom: 20px;
 }
 
 .recipes-shopping {
@@ -583,78 +449,6 @@ input[type="number"] {
   margin-top: 20px;
   text-align: center;
 }
-
-.back-link {
-  color: #333;
-  text-decoration: none;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-
-.registration-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f7f7f7;
-  border-radius: 5px;
-}
-
-.registration-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.registration-form .field {
-  margin-bottom: 20px;
-}
-
-.registration-form label {
-  font-weight: bold;
-}
-
-.registration-form input[type="text"],
-.registration-form input[type="email"],
-.registration-form input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.registration-form .actions {
-  text-align: center;
-}
-
-.registration-form .actions input[type="submit"] {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.registration-form .actions input[type="submit"]:hover {
-  background-color: #0069d9;
-}
-
-.links-text {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.links-text a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.links-text a:hover {
-  text-decoration: underline;
-}
-
 
 .login-form {
   max-width: 400px;
@@ -698,12 +492,59 @@ input[type="number"] {
   cursor: pointer;
 }
 
+.registration-form .actions input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 .login-form .actions input[type="submit"]:hover {
   background-color: #0069d9;
 }
 
 .login-form .field input[type="checkbox"] {
   margin-right: 5px;
+}
+
+.registration-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+
+.registration-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.registration-form .field {
+  margin-bottom: 20px;
+}
+
+.registration-form label {
+  font-weight: bold;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.registration-form .actions {
+  text-align: center;
+}
+
+.registration-form .actions input[type="submit"]:hover {
+  background-color: #0069d9;
 }
 
 .links-text {
@@ -716,10 +557,15 @@ input[type="number"] {
   text-decoration: none;
 }
 
+.navigation a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
 .links-text a:hover {
   text-decoration: underline;
 }
-
 
 .navigation {
   display: flex;
@@ -727,12 +573,6 @@ input[type="number"] {
   align-items: center;
   padding: 10px;
   background-color: #f7f7f7;
-}
-
-.navigation a {
-  margin-right: 10px;
-  text-decoration: none;
-  color: #007bff;
 }
 
 .navigation a.menu-link {
