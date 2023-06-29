@@ -93,9 +93,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-
-
-
 /* Add the following CSS rules to style the main page */
 
 .main-container {
@@ -121,7 +118,6 @@ h1 {
 .main-link:hover {
   background-color: #45a049;
 }
-
 
 /* Add the following CSS rules to style the public_recipes/index page */
 
@@ -168,9 +164,6 @@ h4 {
   margin: 0;
 }
 
-
-
-
 /* Add the following CSS rules to style the recipe_foods/edit page */
 
 input[type="number"] {
@@ -204,10 +197,6 @@ input[type="number"] {
   border: none;
 }
 
-
-
-
-
 /* Add the following CSS rules to style the recipe_foods/new page */
 
 .back-recipe {
@@ -238,12 +227,6 @@ input[type="number"] {
   border: none;
   cursor: pointer;
 }
-
-
-
-
-
-
 
 /* Add the following CSS rules to style the recipe/index page */
 
@@ -289,11 +272,6 @@ input[type="number"] {
   text-decoration: none;
 }
 
-
-
-
-
-
 /* Add the following CSS rules to style the recipes/new page */
 
 .back-button {
@@ -335,12 +313,6 @@ input[type="number"] {
   border: none;
   cursor: pointer;
 }
-
-
-
-
-
-
 
 /* Add the following CSS rules to style the recipes/show page */
 
