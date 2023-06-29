@@ -1,4 +1,4 @@
-<div class="ontainer">
+<div class="container">
   <h2 class="title">Shopping List</h2>
 
   <div class="recipes-container shopping-dets">
@@ -29,5 +29,8 @@
         <% end %>
       </tbody>
     </table>
+  </div>
+  <div class="back-link-container">
+    <%= link_to 'Back', session.delete(:return_to) || root_path, class: "back-link" %>
   </div>
 </div>

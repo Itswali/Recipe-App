@@ -13,4 +13,7 @@
     <%= f.submit "Update", class: "btn btn-primary" %>
     <%= link_to "Cancel", recipe_path(@recipe), class: "btn btn-secondary" %>
   <% end %>
+  <div class="back-link-container">
+    <%= link_to 'Back', session.delete(:return_to) || root_path, class: "back-link" %>
+  </div>
 </div>
