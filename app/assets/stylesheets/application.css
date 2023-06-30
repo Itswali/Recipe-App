@@ -20,7 +20,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
-/* Add the following CSS rules to style the foods/index page */
+/*  foods/index page */
 
 .food-list-container {
   text-align: center;
@@ -60,7 +60,7 @@ p {
   text-decoration: underline;
 }
 
-/* Add the following CSS rules to style the foods/new page */
+/*  foods/new page */
 
 .create-food-container {
   text-align: center;
@@ -93,7 +93,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* Add the following CSS rules to style the main page */
+/*  main page */
 
 .main-container {
   text-align: center;
@@ -119,7 +119,7 @@ h1 {
   background-color: #45a049;
 }
 
-/* Add the following CSS rules to style the public_recipes/index page */
+/*  public_recipes/index page */
 
 h4 {
   font-size: 18px;
@@ -164,7 +164,7 @@ h4 {
   margin: 0;
 }
 
-/* Add the following CSS rules to style the recipe_foods/edit page */
+/*  recipe_foods/edit page */
 
 input[type="number"] {
   width: 100%;
@@ -197,7 +197,7 @@ input[type="number"] {
   border: none;
 }
 
-/* Add the following CSS rules to style the recipe_foods/new page */
+/*  recipe_foods/new page */
 
 .back-recipe {
   margin-bottom: 10px;
@@ -228,7 +228,7 @@ input[type="number"] {
   cursor: pointer;
 }
 
-/* Add the following CSS rules to style the recipe/index page */
+/*  recipe/index page */
 
 .recipe-card {
   background-color: #f2f2f2;
@@ -272,7 +272,7 @@ input[type="number"] {
   text-decoration: none;
 }
 
-/* Add the following CSS rules to style the recipes/new page */
+/*  recipes/new page */
 
 .back-button {
   margin-bottom: 10px;
@@ -314,7 +314,7 @@ input[type="number"] {
   cursor: pointer;
 }
 
-/* Add the following CSS rules to style the recipes/show page */
+/*  recipes/show page */
 
 .recipe-details-container {
   margin: 20px;
