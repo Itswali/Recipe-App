@@ -1,14 +1,26 @@
-<div class="food-list-container">
-  <h1>Food list for <%= @user.name %></h1>
+<%= link_to 'Add Food', new_food_path, class: "new_food_link" %>
 
-  <% @foods.each do |food| %>
-    <div class="food-item">
-      <p><%= food.name %> (Quantity: <%= food.quantity %>, price: <%= food.price %>$, Measuring Unit: <%= food.measuring_unit %>)</p>
-      <%= button_to "Delete", food_path(food), method: :delete, data: { confirm: 'Are you sure you want to delete this food item?' }, class: "delete-button" %>
-    </div>
-  <% end %>
+<table>
+    <thead>
+        <tr>
+            <th>Food</th>
+            <th>Measuring unit</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      <% @foods.each do |food| %>
+        <tr>
+          <td><%= food.name %></td>
+          <td><%= food.measuring_unit %></td>
+          <td>$<%= food.price %></td>
+          <td><%= food.quantity %></td>
+         <td> <%= button_to "Delete", food_path(food), method: :delete, data: { confirm: 'Are you sure you want to delete this food item?' }, class: "delete-button" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+</table>
+<%= link_to 'Back', session.delete(:return_to) || root_path, class: "back-link" %>
 
-  <div class="back-link-container">
-    <%= link_to 'Back', session.delete(:return_to) || root_path, class: "back-link" %>
-  </div>
-</div>

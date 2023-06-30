@@ -1,5 +1,5 @@
-<div class="login-form">
-  <h2>Log in</h2>
+
+  <h2 class="login-title">Log in</h2>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
       <%= f.label :email %><br />
@@ -23,9 +23,10 @@
       <%= f.submit "Log in" %>
     </div>
   <% end %>
-<div class="links-text">
+  <div class="field">
   <%= render "devise/shared/links" %>
 </div>
-  <br>
+
+
   <%= link_to 'Back', session.delete(:return_to) || root_path %>
-</div>
+
