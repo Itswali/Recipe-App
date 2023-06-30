@@ -360,10 +360,6 @@ input[type="number"] {
   cursor: pointer;
 }
 
-.buttons {
-  margin-bottom: 20px;
-}
-
 .recipe-table {
   width: 100%;
   border-collapse: collapse;
@@ -582,6 +578,7 @@ input[type="number"] {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .buttons button {
