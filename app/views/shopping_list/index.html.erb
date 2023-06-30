@@ -1,14 +1,16 @@
 <div class="container">
   <h2 class="title">Shopping List</h2>
 
-  <div class="recipes-container shopping-dets">
-    <h4 class="recipes-shopping">
-      Amount of food items to buy: <%= @total_foods %>
-    </h4>
-    <h4 class="recipes-shopping">
-      Total value of food needed: $<%= @total_price %>
-    </h4>
+  <div class="detail-shopping">
+  <div class="detail-list">
+    <h4>Amount of food items to buy: <%= @total_foods %></h4>
   </div>
+  <div class="gap"></div>
+  <div class="detail-list">
+    <h4>Total value of food needed: $<%= @total_price %></h4>
+  </div>
+</div>
+
 
   <div class="recipes-container">
     <table class="table table-bordered table-hover">

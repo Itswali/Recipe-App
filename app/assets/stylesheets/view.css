@@ -55,6 +55,25 @@ p {
   text-align: center;
 }
 
+.public-recipe-list {
+  border: 2px solid lightblue;
+  box-shadow: 1px 1px 5px lightblue;
+  border-radius: 5px;
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.public-block-1,
+.public-block-2 {
+    width: 50%;
+  }
+
+  .public-block-2 {
+    text-align: right;
+  }
+
 #user_remember_me {
   width: 5%;
 }
@@ -186,15 +205,39 @@ form > .delete-button {
   margin-left: -40px;
 }
 
-.detail_links {
+.detail-links {
   display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
-.detail_links a {
+.button-link {
   border: 2px solid lightblue;
-  padding: 15px;
-  width: 100px;
+  padding: 5px;
+  width: 200px;
+  margin: 0 15px;
+  text-align: center;
 }
+
+.title {
+  text-align: center;
+}
+
+.detail-shopping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-list {
+  margin: 0 15px;
+}
+
+.gap {
+  width: 50px;
+}
+
 
 table {
   margin: 20px auto;
