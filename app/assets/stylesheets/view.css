@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.logout-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 16px;
+  background-color: #f2f2f2;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #ddd;
+}
+
+h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.back-link {
+  text-align: center;
+}
+
+.main-link {
+  display: inline-block;
+  margin: 10px;
+  padding: 8px 16px;
+  background-color: #f2f2f2;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.main-link:hover {
+  background-color: #ddd;
+}
+
+p {
+  margin-top: 20px;
+}
+
+.form-title,
+.login-title,
+.home-title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.public-recipe-list {
+  border: 2px solid lightblue;
+  box-shadow: 1px 1px 5px lightblue;
+  border-radius: 5px;
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.public-block-1,
+.public-block-2 {
+  width: 50%;
+}
+
+.public-block-2 {
+  text-align: right;
+}
+
+#user_remember_me {
+  width: 5%;
+}
+
+form {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 1px 1px 5px lightblue;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field input {
+  width: 90%;
+  padding: 10px;
+  border: 2px solid lightblue;
+  outline: none;
+}
+
+.actions input {
+  background-color: lightblue;
+  cursor: pointer;
+  padding: 5px 15px;
+  border: none;
+  outline: none;
+}
+
+.actions input:active {
+  opacity: 0.8;
+}
+
+a {
+  display: block;
+  margin: 5px auto;
+  width: 90%;
+  max-width: 500px;
+}
+
+.recipe-main {
+  padding: 10%;
+}
+
+.recipe-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 5%;
+  border: 5px solid grey;
+  margin: 3%;
+}
+
+.right-content {
+  width: 30%;
+  font-size: 18px;
+}
+
+.field textarea {
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+  border: 2px solid lightblue;
+  outline: none;
+}
+
+.field.public-check {
+  display: flex;
+  align-content: center;
+}
+
+#recipe_public {
+  width: 3%;
+}
+
+a,
+li {
+  list-style-type: none;
+  color: black;
+  text-decoration: none;
+}
+
+li {
+  margin-top: 20px;
+}
+
+.detail-title {
+  text-align: center;
+  padding: 0;
+}
+
+.details-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 0 5%;
+}
+
+.btn-primary {
+  background-color: white;
+  cursor: pointer;
+  padding: 5px 15px;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+.button_to {
+  padding: 0;
+  width: 0;
+}
+
+.recipe-left {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 3%;
+}
+
+form > .delete-button {
+  align-self: flex-start;
+  border: none;
+  background: none;
+  text-decoration: underline;
+  font-size: 18px;
+  outline: none;
+  margin-left: -40px;
+}
+
+.detail-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-link {
+  border: 2px solid lightblue;
+  padding: 5px;
+  width: 200px;
+  margin: 0 15px;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.detail-shopping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-list {
+  margin: 0 15px;
+}
+
+.gap {
+  width: 50px;
+}
+
+table {
+  margin: 20px auto;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 1px 1px 5px lightblue;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 2px solid lightblue;
+}
+
+.new_food_link {
+  display: block;
+  padding: 10px;
+  border: 2px solid lightblue;
+  width: 100px;
+  text-align: center;
+  color: black;
+}
+
+.public_recipe {
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 1px 1px 5px lightblue;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.public_recipe div {
+  margin: 10px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  border: 2px solid lightblue;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.navigation a:hover {
+  color: lightblue;
+}
+
+.logout {
+  box-shadow: none;
+  width: 50px;
+  margin: 0;
+}

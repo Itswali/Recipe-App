@@ -1,33 +1,28 @@
-<div class="back-button">
-  <button type="button"><%= link_to "Back to recipes", recipes_path %></button>
-</div>
-
-<div class="new-recipe-container">
-<h2 class="title">New Recipe</h2>
-<div class="new-recipe">
+<h1 class="form-title">Create New Recipe</h1>
+<div class="new-food">
   <%= form_with model: @recipe, url: recipes_path, local: true do |f| %>
-    <div>
+    <div class="field">
       <%= f.label :name, 'Recipe name'%><br>
       <%= f.text_field :name,class: "form-control"%>
     </div>
-    <div>
+    <div class="field">
       <%= f.label :description, 'Description'%><br>
       <%= f.text_area :description, class: "form-control" %>
     </div>
-    <div>
+    <div class="field">
       <%= f.label :preparation_time, 'Preparation Time'%><br>
       <%= f.number_field :preparation_time, class: "form-control" %>
     </div>
-    <div>
+    <div class="field">
       <%= f.label :cooking_time, 'Cooking Time'%><br>
       <%= f.number_field :cooking_time, step: 0.5, class: "form-control" %>
     </div>
-    <div>
+    <div class="field public-check">
       <%= f.label :public, "Do you want to make it public?", class: "public" %>
       <%= f.check_box :public%><br/>
     </div>
-    <div class="submit">
-      <%= f.submit "Create Recipe", class: "food-create" %>
+    <div class="actions">
+      <%= f.submit "Add Recipe" %>
     </div>
   <% end %>
   <div class="back-link-container">
