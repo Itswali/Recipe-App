@@ -17,8 +17,9 @@
 
   <div class="buttons">
 
-    <%# <button><%= link_to "Generate shopping list", shopping_list_path</button> %> %>
-    <%# <button class="recipe_btn"><%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe.id) </button>  %> %>
+<button><%= link_to "Generate shopping list", shopping_list_path %></button>
+<button class="recipe_btn"><%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe.id) %></button>
+
   </div>
 
   <% if @recipe.public? || (@recipe.user == current_user) %>
