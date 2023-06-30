@@ -8,15 +8,12 @@ Rails.application.routes.draw do
     post 'toggle', on: :member
   end
   resources :shopping_list, only: [:index]
-  get '/shopping_list', to: 'shopping_lists#index', as: 'shopping_list'
 
   resources :public_recipes, only: [:index]
 
   resources :recipes do
     resources :recipe_foods, only: [:new, :create]
   end
-
-
 
   # Your other routes go here
 end
