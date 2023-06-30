@@ -576,3 +576,33 @@ input[type="number"] {
 .navigation form .menu-link:hover {
   background-color: #c82333;
 }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+}
+
+.buttons button.recipe_btn {
+  background-color: #dc3545;
+}
+
+.buttons button.button-link:hover {
+  opacity: 0.8;
+}
+
+.buttons button.recipe_btn:hover {
+  opacity: 0.8;
+}
