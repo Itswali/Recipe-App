@@ -1,22 +1,25 @@
-<div class="recipes-container">
+<section class="recipe-main">
   <% @recipes.each do |recipe| %>
-  <div class="recipe-card">
-    <div class="recipe-title">
-      <h3 class="recipe_name"><%= link_to recipe.name, recipe_path(id: recipe.id) %></h3>
+  <div class="recipe-container">
+    <div class="left-content">
+      <div class="title">
+       <h3><%= link_to recipe.name, recipe_path(id: recipe.id) %></h3>
+      </div>
+      <div class="remove-btn">
       <% if can? :destroy, recipe %>
-        <%= button_to "Remove", recipe_path(id: recipe.id), data: { turbo_method: :delete }, method: :delete, "turbo-frame": "recipes" %>
+        <%= button_to "Remove", recipe_path(id: recipe.id), data: { turbo_method: :delete }, method: :delete, "turbo-frame": "recipes", class:"delete-button" %>
       <% end %>
+      </div>
+
+
     </div>
-    <div class="recipe-features">
-      <p class="recipe_desc"><%= recipe.description%></p>
+    <div class="right-content">
+      <p><%= recipe.description%></p>
     </div>
   </div>
   <% end %>
 
 
-  <div class="add-recipe">
-    <button class="recipe-btn"><%= link_to "Add Recipe", new_recipe_path %></button>
-  </div>
   <div class="back-link-container">
     <%= link_to 'Back', session.delete(:return_to) || root_path, class: "back-link" %>
   </div>

@@ -112,7 +112,8 @@ a {
 }
 
 .right-content {
-  width: 60%;
+  width: 30%;
+  font-size: 18px;
 }
 
 .field textarea {
@@ -182,7 +183,7 @@ form > .delete-button {
   text-decoration: underline;
   font-size: 18px;
   outline: none;
-  margin-left: -80px;
+  margin-left: -40px;
 }
 
 .detail_links {
