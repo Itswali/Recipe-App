@@ -14,62 +14,420 @@
  *= require_self
  */
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-.main-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #2b2e38;
-  border-radius: 6px;
-  color: #ffeba7;
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Add the following CSS rules to style the foods/index page */
+
+.food-list-container {
   text-align: center;
+  margin: 20px;
 }
 
-.main-container h1 {
-  margin-bottom: 20px;
-}
-
-.main-container p {
+p {
   margin-bottom: 10px;
 }
 
-.main-container .main-link {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 4px;
-  background-color: #ffeba7;
-  color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin-right: 10px;
+.food-item {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-.back-link-container {
-  display: flex;
-  justify-content: center;
+.food-item p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 .back-link {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 4px;
-  background-color: #ffeba7;
-  color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
+  color: #00f;
   text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Add the following CSS rules to style the foods/new page */
+
+.create-food-container {
+  text-align: center;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Add the following CSS rules to style the main page */
+
+.main-container {
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.main-link {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
   margin-right: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.main-link:hover {
+  background-color: #45a049;
+}
+
+/* Add the following CSS rules to style the public_recipes/index page */
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.recipes-container {
+  margin: 20px;
+}
+
+.public-recipe-card {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.recipe-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.recipe-name h4 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.recipe-name span {
+  font-size: 14px;
+}
+
+.total-food-price p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Add the following CSS rules to style the recipe_foods/edit page */
+
+input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.invalid-feedback {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #4caf50;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #808080;
+  border: none;
+}
+
+/* Add the following CSS rules to style the recipe_foods/new page */
+
+.back-recipe {
+  margin-bottom: 10px;
+}
+
+.recipe-food-new {
+  margin: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.recipe-create {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Add the following CSS rules to style the recipe/index page */
+
+.recipe-card {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.recipe-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.recipe_name {
+  font-size: 20px;
+  margin: 0;
+}
+
+.recipe-features {
+  margin-bottom: 10px;
+}
+
+.recipe_desc {
+  font-size: 16px;
+  margin: 0;
+}
+
+.add-recipe {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.recipe-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Add the following CSS rules to style the recipes/new page */
+
+.back-button {
+  margin-bottom: 10px;
+}
+
+.back-button button {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.new-recipe-container {
+  margin: 20px;
+}
+
+.new-recipe {
+  margin-bottom: 20px;
+}
+
+.public {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.submit {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.food-create {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Add the following CSS rules to style the recipes/show page */
+
+.recipe-details-container {
+  margin: 20px;
+}
+
+.recipe-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.all-details {
+  flex-grow: 1;
+}
+
+.detail {
+  margin-bottom: 10px;
+}
+
+.detail span {
+  font-weight: bold;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+}
+
+.private {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #f44336;
+  color: white;
+}
+
+.toggle_btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons {
+  margin-bottom: 20px;
+}
+
+.recipe-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recipe-table th,
+.recipe-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.recipe-table th {
+  background-color: #f2f2f2;
+}
+
+.modify-remove {
+  white-space: nowrap;
+}
+
+.modify-remove button {
+  margin-right: 5px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.recipes-shopping {
+  font-weight: bold;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.table thead {
+  background-color: #f2f2f2;
+}
+
+.shoppinglist.food td {
+  background-color: #fff;
+}
+
+.back-link-container {
+  margin-top: 20px;
+  text-align: center;
 }
 
 .login-form {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #2b2e38;
-  border-radius: 6px;
-  color: #ffeba7;
+  background-color: #f7f7f7;
+  border-radius: 5px;
 }
 
 .login-form h2 {
@@ -78,67 +436,57 @@
 }
 
 .login-form .field {
-  margin-bottom: 10px;
-  padding-right: 20px;
+  margin-bottom: 20px;
 }
 
 .login-form label {
-  display: block;
-  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .login-form input[type="email"],
 .login-form input[type="password"] {
   width: 100%;
   padding: 10px;
-  border: none;
-  background-color: #1f2029;
-  color: #ffeba7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 .login-form .actions {
   text-align: center;
-  margin-top: 20px;
 }
 
-.login-form input[type="submit"] {
+.login-form .actions input[type="submit"] {
   padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  border-radius: 4px;
-  background-color: #ffeba7;
-  color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
+  border-radius: 3px;
   cursor: pointer;
 }
 
-.registration-form input[type="submit"] {
+.registration-form .actions input[type="submit"] {
   padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  border-radius: 4px;
-  background-color: #ffeba7;
-  color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
+  border-radius: 3px;
   cursor: pointer;
 }
 
-.login-form a {
-  color: #ffeba7;
+.login-form .actions input[type="submit"]:hover {
+  background-color: #0069d9;
 }
 
-.links-text {
-  text-align: center;
-  margin: 5px;
+.login-form .field input[type="checkbox"] {
+  margin-right: 5px;
 }
 
 .registration-form {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #2b2e38;
-  border-radius: 6px;
-  color: #ffeba7;
+  background-color: #f7f7f7;
+  border-radius: 5px;
 }
 
 .registration-form h2 {
@@ -148,107 +496,83 @@
 
 .registration-form .field {
   margin-bottom: 20px;
-  padding-right: 20px;
 }
 
 .registration-form label {
-  display: block;
-  margin-bottom: 5px;
+  font-weight: bold;
 }
 
+.registration-form input[type="text"],
 .registration-form input[type="email"],
 .registration-form input[type="password"] {
   width: 100%;
   padding: 10px;
-  border: none;
-  background-color: #1f2029;
-  color: #ffeba7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 .registration-form .actions {
   text-align: center;
+}
+
+.registration-form .actions input[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+.links-text {
+  text-align: center;
   margin-top: 20px;
 }
 
-.registration-form a {
-  color: #ffeba7;
+.links-text a {
+  color: #007bff;
+  text-decoration: none;
 }
 
-/* Shared Styles */
+.navigation a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.links-text a:hover {
+  text-decoration: underline;
+}
 
 .navigation {
-  text-align: right;
-  margin-bottom: 20px;
-}
-
-.menu-link {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 4px;
-  background-color: #ffeba7;
-  color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin-right: 10px;
-}
-
-/* Food List Page */
-.food-list-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #2b2e38;
-  border-radius: 6px;
-  color: #ffeba7;
-}
-
-.food-list-container h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.food-list-container p {
-  margin-bottom: 10px;
-}
-
-/* Create Food Page */
-.create-food-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #2b2e38;
-  border-radius: 6px;
-  color: #ffeba7;
-}
-
-.create-food-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.create-food-container label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.create-food-container input[type="text"],
-.create-food-container input[type="number"] {
-  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   padding: 10px;
-  border: none;
-  background-color: #1f2029;
-  color: #ffeba7;
-  margin-bottom: 10px;
+  background-color: #f7f7f7;
 }
 
-.create-food-container input[type="submit"] {
-  padding: 10px 20px;
+.navigation a.menu-link {
+  padding: 5px 10px;
+  border: 1px solid #007bff;
+  border-radius: 3px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.navigation a.menu-link:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.navigation form {
+  margin-left: 10px;
+}
+
+.navigation form .menu-link {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
   border: none;
-  border-radius: 4px;
-  background-color: #ffeba7;
-  color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
+  border-radius: 3px;
   cursor: pointer;
+}
+
+.navigation form .menu-link:hover {
+  background-color: #c82333;
 }

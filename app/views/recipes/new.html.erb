@@ -30,4 +30,7 @@
       <%= f.submit "Create Recipe", class: "food-create" %>
     </div>
   <% end %>
+  <div class="back-link-container">
+    <%= link_to 'Back', session.delete(:return_to) || root_path, class: "back-link" %>
+  </div>
 </div>
