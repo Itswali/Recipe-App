@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 .main-container {
   text-align: center;
   margin-top: 50px;
@@ -47,7 +53,6 @@ p {
   margin-top: 20px;
 }
 
-
 .form-title,
 .login-title,
 .home-title {
@@ -67,12 +72,12 @@ p {
 
 .public-block-1,
 .public-block-2 {
-    width: 50%;
-  }
+  width: 50%;
+}
 
-  .public-block-2 {
-    text-align: right;
-  }
+.public-block-2 {
+  text-align: right;
+}
 
 #user_remember_me {
   width: 5%;
@@ -116,7 +121,6 @@ a {
   width: 90%;
   max-width: 500px;
 }
-
 
 .recipe-main {
   padding: 10%;
@@ -238,7 +242,6 @@ form > .delete-button {
   width: 50px;
 }
 
-
 table {
   margin: 20px auto;
   border: 2px solid lightblue;
@@ -262,13 +265,6 @@ td {
   width: 100px;
   text-align: center;
   color: black;
-}
-
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-* {
-  font-family: 'Roboto', sans-serif;
 }
 
 .public_recipe {
