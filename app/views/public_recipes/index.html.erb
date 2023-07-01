@@ -1,14 +1,14 @@
-<h2 class="home-title">Public Recipes</h2>
+<h2 class="title">Public Recipes</h2>
 
+<div class="recipes-container">
   <% @public_recipes.each do |public_recipe| %>
     <%= link_to recipe_path(id: public_recipe.id) do%>
-      <div class="public-recipe-list">
-        <div class="public-block-1">
-        <h4><%= public_recipe.name %></h4>
+      <div class="public-recipe-card">
+        <div class="recipe-name">
+          <h4><%= public_recipe.name %></h4>
           <span>By: <%= public_recipe.user.name %></span>
-          </div>
-
-        <div class="public-block-2">
+        </div>
+        <div class="total-food-price">
           <p>Total food items: <%= public_recipe.recipe_foods.count %></p>
           <p>Total Price: $
             <% total_price = 0 %>
@@ -21,6 +21,4 @@
       </div>
     <% end %>
   <% end %>
-  <div class="back-link-container">
-    <%= link_to 'Back', session.delete(:return_to) || root_path, class: "back-link" %>
-  </div>
+</div>

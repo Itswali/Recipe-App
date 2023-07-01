@@ -1,4 +1,4 @@
-class ShoppingListController < ApplicationController
+class ShoppingListsController < ApplicationController
   before_action :find_user
 
   def index
