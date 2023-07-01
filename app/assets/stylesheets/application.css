@@ -1,229 +1,228 @@
 /* General */
 body {
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .sign-main {
-    margin: 1rem;
-  }
-  
-  /* login */
-  
-  .new-session {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .remember {
-    margin: 1rem 0;
-  }
-  
-  .shared {
-    padding: 2rem 0;
-    color: blue;
-    text-decoration: underline;
-  }
-  
-  /* sign up */
-  
-  /* Recipes views */
-  
-  .recipes-container {
-    max-width: 60rem;
-    margin: 2rem auto;
-    padding: 3rem 1.5rem;
-  
-    /* box-shadow: rgba(67, 71, 85, 0.27) 0 0 0.25em,
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sign-main {
+  margin: 1rem;
+}
+
+/* login */
+
+.new-session {
+  display: flex;
+  justify-content: center;
+}
+
+.remember {
+  margin: 1rem 0;
+}
+
+.shared {
+  padding: 2rem 0;
+  color: blue;
+  text-decoration: underline;
+}
+
+/* sign up */
+
+/* Recipes views */
+
+.recipes-container {
+  max-width: 60rem;
+  margin: 2rem auto;
+  padding: 3rem 1.5rem;
+
+  /* box-shadow: rgba(67, 71, 85, 0.27) 0 0 0.25em,
       rgba(90, 125, 188, 0.05) 0 0.25em 1em; */
-    border: 1px solid gainsboro;
-    border-radius: 10px;
-  }
-  
-  .recipe-card {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    padding: 1rem;
-    gap: 0.8rem;
-    border: 1px solid gainsboro;
-    border-radius: 5px;
-    margin: 1rem 0;
-  }
-  
-  .recipe-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .add-recipe {
-    display: flex;
-    justify-content: center;
-  }
-  
-  button,
-  .recipe-create,
-  .food-create,
-  .log-in,
-  .sign-up {
-    padding: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
-    border: none;
-    border-radius: 5%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    cursor: pointer;
-  }
-  
-  /* public recipe */
-  
-  .public-recipe-card {
-    max-width: 40rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: 1rem;
-    gap: 0.8rem;
-    border: 1px solid gainsboro;
-    border-radius: 5px;
-    margin: 1rem auto;
-  }
-  
-  .total-food-price {
-    font-size: 18px;
-  }
-  
-  .recipe-name {
-    padding-left: 20px;
-  }
-  
-  /* Recipe details */
-  
-  .recipe-details-container {
-    max-width: 70rem;
-    margin: 2rem auto;
-    padding: 3rem 1.5rem;
-  }
-  
-  .title {
-    text-align: center;
-  }
-  
-  .public-private {
-    margin: 16px;
-    padding: 10px;
-  }
-  
-  .detail {
-    padding: 10px;
-  }
-  
-  .recipe-details {
-    display: grid;
-    grid-template-columns: 4fr 2fr;
-    margin: 2rem;
-    padding: 0 3rem;
-  }
-  
-  .buttons {
-    display: grid;
-    grid-template-columns: 200px 200px;
-    justify-content: space-evenly;
-  }
-  
-  .toggle {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .private {
-    position: relative;
-    top: 4px;
-  }
-  
-  /* Add recipe */
-  
-  .new-recipe,
-  .new-food {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .input {
-    width: 250px;
-    height: 25px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    margin: 7px 0;
-    color: lightblue;
-  }
-  
-  .recipe-create {
-    margin: 10px 0;
-  }
-  
-  .back-button,
-  .back-recipe {
-    margin: 0 2rem;
-  }
-  
-  .public {
-    margin: 2rem 0;
-  }
-  
-  /* Recipe details table */
-  
-  .recipe-table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .table {
-    text-align: center;
-    table-layout: fixed;
-    width: 100%;
-  }
-  
-  .table th,
-  .table td {
-    text-align: center;
-  }
-  
-  .recipe-table th,
-  .recipe-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  .recipe-table th {
-    background-color: #f2f2f2;
-    color: #333;
-  }
-  
-  .recipe-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  td.modify-remove {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  /* Add food to recipe */
-  
-  .recipe-food-new {
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* Shopping List */
-  
-  .shopping-dets {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+}
+
+.recipe-card {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  padding: 1rem;
+  gap: 0.8rem;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+.recipe-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-recipe {
+  display: flex;
+  justify-content: center;
+}
+
+button,
+.recipe-create,
+.food-create,
+.log-in,
+.sign-up {
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+  border: none;
+  border-radius: 5%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* public recipe */
+
+.public-recipe-card {
+  max-width: 40rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 1rem;
+  gap: 0.8rem;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  margin: 1rem auto;
+}
+
+.total-food-price {
+  font-size: 18px;
+}
+
+.recipe-name {
+  padding-left: 20px;
+}
+
+/* Recipe details */
+
+.recipe-details-container {
+  max-width: 70rem;
+  margin: 2rem auto;
+  padding: 3rem 1.5rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.public-private {
+  margin: 16px;
+  padding: 10px;
+}
+
+.detail {
+  padding: 10px;
+}
+
+.recipe-details {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  margin: 2rem;
+  padding: 0 3rem;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  justify-content: space-evenly;
+}
+
+.toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.private {
+  position: relative;
+  top: 4px;
+}
+
+/* Add recipe */
+
+.new-recipe,
+.new-food {
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  width: 250px;
+  height: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  margin: 7px 0;
+  color: lightblue;
+}
+
+.recipe-create {
+  margin: 10px 0;
+}
+
+.back-button,
+.back-recipe {
+  margin: 0 2rem;
+}
+
+.public {
+  margin: 2rem 0;
+}
+
+/* Recipe details table */
+
+.recipe-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table {
+  text-align: center;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  text-align: center;
+}
+
+.recipe-table th,
+.recipe-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.recipe-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.recipe-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td.modify-remove {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Add food to recipe */
+
+.recipe-food-new {
+  display: flex;
+  justify-content: center;
+}
+
+/* Shopping List */
+
+.shopping-dets {
+  display: flex;
+  justify-content: space-evenly;
+}
