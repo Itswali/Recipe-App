@@ -12,11 +12,12 @@ Rails.application.routes.draw do
     resources :recipe_foods, only: [:new, :create, :edit, :update, :destroy]
   end
   resources :public_recipes, only: [:index]
-  
+
   post 'recipes/:id/toggle', to: 'recipes#toggle', as: :toggle_recipe
 
   get '/shopping_lists', to: 'shopping_lists#index'
 
+  get '/shopping_list', to: 'shopping_lists#index', as: 'shopping_list'
 
   resources :users do
     resources :foods, only: [:index, :show, :new, :create, :destroy]
@@ -24,6 +25,4 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "recipes#index"
 end
-  get '/shopping_list', to: 'shopping_lists#index', as: 'shopping_list'
 
-end
