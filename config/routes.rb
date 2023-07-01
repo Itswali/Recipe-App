@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   resources :recipes do
     resources :recipe_foods, only: [:new, :create]
   end
+  get '/shopping_list', to: 'shopping_lists#index', as: 'shopping_list'
+
 
   # Your other routes go here
 end
